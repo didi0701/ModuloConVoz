@@ -1,0 +1,27 @@
+{
+"patientName":"JUAN CARLOS ZAMBRANO PEREZ",
+"patientId":"1720591237",
+"patientBD":"19950107",
+"studyDate":"20210116",
+"modality":"CR",
+"studyDescription":"T-L SPINE",
+"seriesList":[
+	{
+	"seriesUid":"RADIOGRAFIA1",
+	"seriesDescription":"COLUMNA VERTEBRAL",
+	"seriesNumber":"1",
+	"modality":"CR",
+	"institutionName":"CENDIAVIA",
+	"instanceList":[
+		{"imageId":"RAD1","Location":"","Number":"1", "Acquisition":"0"},
+		{"imageId":"RAD2","Location":"","Number":"2", "Acquisition":"0"},
+		{"imageId":"RAD3","Location":"","Number":"3", "Acquisition":"0"},
+		{"imageId":"RAD4","Location":"","Number":"4", "Acquisition":"0"},
+		{"imageId":"RAD5","Location":"","Number":"5", "Acquisition":"0"},
+		{"imageId":"RAD6","Location":"","Number":"6", "Acquisition":"0"},
+		{"imageId":"RAD7","Location":"","Number":"7", "Acquisition":"0"}
+			
+	]
+}
+]
+}
