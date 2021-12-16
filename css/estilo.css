@@ -1,14 +1,33 @@
+/* HOVER IMAGENES */
+.lista:hover{
+  color: red;
+}
+
+/* TABLA RESPONSIVE */
+wrap {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
 /*LISTA IMAGENES*/
+#listaImagenes {
+  /* margin: 0 auto; */
+  /* padding: 0 2px; */
+  width: 50%;
+  background: black;
+  border-radius: 10px;
+  padding: 1%;
+  }
+
 #listaImagenes {
   bottom: 0%;
   text-align: center;
-  background-color: #f59430;
+  background-color: #d2dce5  ;
   color: #054286;
-  padding: 0;
   font-size: 14px;
   width: 5%;
   top: 1%;
-  height: 2%;
+  height: 4%;
   border-radius: 10%;
   z-index: 1;
   position: absolute;
@@ -50,7 +69,7 @@
 /*INFORME*/
 #listaAcor {
   text-align: left;
-  background-color: #f59430;
+  background-color: #d5dfe7;
   color: #054286;
   width: 50%;
 }
@@ -170,7 +189,7 @@ nav {
 }
 .Menu {
   position: relative;
-  background-color: #054286;
+  background-color: #f59430 ;
   border: none;
   font-size: 28px;
   color: #d2dce5;
@@ -185,7 +204,7 @@ nav {
 }
 .Menu:after {
   content: "";
-  background: #f1f1f1;
+  background: #f59430;
   display: block;
   position: absolute;
   padding-top: 300%;
@@ -203,15 +222,15 @@ nav {
 }
 /*DERECHA E IZQUIERDA*/
 .boton {
-  height: 10%;
+  height: 5%;
   width: 100px;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   text-align: center;
   text-decoration: none;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  display: inline-block;
-  color: #fff;
-  background: #f59430;
+  /* display: inline-block; */
+  color: #f2f2f2;
+  background:  #054286    ;
   padding: 1px 10px;
   white-space: nowrap;
   -webkit-border-radius: 5px;
@@ -225,14 +244,17 @@ nav {
   transition: all 0.2s ease-in-out;
 }
 .azul {
-  background: #f59430;
-  box-shadow: 0px 5px 0px 0px #2980b9;
+  margin: 2%;
+  padding: 1%;
+  background:  #6b87ab ;
+  box-shadow: 0px 1px 0px 0px  #054286 ;
 }
-.azul:hover {
-  background: #39a0e5;
+.boton:hover {
+  background: #6b87ab ;
+  color: #054186;
 }
 .azul:active {
-  box-shadow: 0px 2px 0px 0px #2980b9;
+  box-shadow: 0px 2px 0px 0px  #6b87ab ;
 }
 /*MENU LATERAL*/
 .btn-nav {

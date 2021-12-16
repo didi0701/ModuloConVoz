@@ -4,10 +4,10 @@ $('.tbl-accordion-nested').each(function(){
 	var thead = $(this).find('thead');
 	var tbody = $(this).find('tbody');
 //OCULTAR
-	 // tbody.hide();
+	//  tbody.hide();
 	 thead.click(function(){
 	 	tbody. slideToggle();
-	 	document.getElementById("diagnostico").rows = "22";
+	 	document.getElementById("diagnostico").rows = "25";
 	 	document.getElementById("listaAcor").style.width = "100%";
 	 	document.getElementById("contenido").style.width = "100%";
 	 })
@@ -148,8 +148,8 @@ function tabla(datos) {
 	           //console.log(valor)
 	           contenido.innerHTML += `
 	           <tr>
-	           <th   style=" text-align: left; font-size:11px;  background-color: #054286 ; color: #f2f2f2 " scope="row">DATOS PACIENTE  </th>
-	         	<th   style=" text-align: right; font-size:15px;  background-color: #054286 ; color: #f2f2f2 " scope="row">${ cliente[1] } </th>
+	           <th   style=" text-align: left; font-size:11px;  background-color:  #345c94  ; color: #f2f2f2 " scope="row">DATOS PACIENTE  </th>
+	         	<th   style=" text-align: right; font-size:15px;  background-color:  #345c94  ; color: #f2f2f2 " scope="row">${ cliente[1] } </th>
 	           </tr>
 	            
 	           <tr>
@@ -171,7 +171,7 @@ function tabla(datos) {
 	           	// console.log(valor1.instanceList)
 	           	contenido.innerHTML += `
 	           	<tr >
-	           	<th  colspan="2" style=" text-align: left; font-size:11px;  background-color: #054286 ; color: #f2f2f2 " scope="row">RESULTADOS</th>
+	           	<th  colspan="2" style=" text-align: left; font-size:11px;  background-color:  #345c94  ; color: #f2f2f2 " scope="row">RESULTADOS</th>
 	           	</tr> 
 	           	<tr>
 	           	<th   scope="row"><strong>FECHA EXAMEN</strong></th>
