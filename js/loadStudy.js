@@ -125,7 +125,7 @@
                             '<a class="list-group-item it-' + i + '" oncontextmenu="return false" unselectable="on" onselectstart="return false;" onmousedown="return false;">' +
                             '<div class="csthumbnail" oncontextmenu="return false" unselectable="on" onselectstart="return false;" onmousedown="return false;"></div>' +
                             '<div  hidden="true" style="color: #f2f2f2">' + stack.seriesDescription + '</div>' +
-                        '<div  style="color:  #f2f2f2 ; background-color:#49699c  " class="text-center small">' + 'Rad. #' + j + '</div>' +
+                        '<div  style="color:  #f2f2f2 ; background-color:#49699c  " class="text-center small">' + 'Resultado. #' + j + '</div>' +
                             '</a>'
                         );
                         $(seriesList).append(seriesElement)

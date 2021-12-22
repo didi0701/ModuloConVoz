@@ -1,3 +1,67 @@
+/* responsivo */
+/* body {
+  overflow-x: hidden;
+} */
+.buttonr {
+  border: 1.2vh  rgb(200, 200, 200);
+  /* margin: 1.5vh 1vw; */
+  width: 5vw;
+  font-size: 2vw;
+  /* transition: all 1s ease-in-out; */
+}
+
+#laptop {
+  float: left;
+  width: 45%;
+}
+
+#tablet {
+  float: left;
+  width: 20%;
+}
+
+@media only screen and (orientation: landscape) {
+  .buttonr,
+  #instructions {
+    font-size: 2vh;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  #laptop {
+    float: none;
+    width: 50%;
+  }
+  #tablet {
+    float: left;
+    width: 20%;
+  }
+  .btn btn-secondary {
+    width: 15vw;
+    font-size: 3vw;
+  }
+  .btn btn-secondary {
+    width: 15vw;
+    font-size: 3vw;
+  }
+
+}
+
+@media only screen and (max-width: 35px) {
+  #laptop {
+    width: calc(25vw - 82px);
+  }
+  #tablet {
+    float: none;
+    width: calc(25vw - 82px);
+  }
+  .btn btn-secondary {
+    width: calc(25vw - 32px);
+    font-size: 4vw;
+  }
+}
+
+
 /* HOVER IMAGENES */
 .lista:hover{
   color: red;
@@ -36,7 +100,7 @@ wrap {
 /*HERRAMIENTAS MENU*/
 #Herramientas {
   position: absolute;
-  top: 5%;
+  top: 1%;
   height: 80%;
   padding: 1%;
   left: 7%;

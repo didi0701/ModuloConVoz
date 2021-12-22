@@ -11,12 +11,18 @@ return temp;
 }
 function setupViewportOverlays(element, data) {
     var parent = $(element).parent();
+
     // Get the overlays
     var childDivs = $(parent).find('.overlay');
     var topLeft = $(childDivs[0]).find('div');
     var topRight = $(childDivs[1]).find('div');
     var bottomLeft = $(childDivs[2]).find('div');
     var bottomRight = $(childDivs[3]).find('div');
+    var zoomDate=$('#zoomDate');
+    var wwDate=$('#wwDate');
+    var renderDate=$('#renderDate');
+ 
+     
     var bottomMiddle = $(childDivs[4]).find('div');
     // Set the overlay text
     $(topLeft[0]).text(data.patientName);
@@ -55,11 +61,14 @@ function setupViewportOverlays(element, data) {
     // On image rendered
     function onImageRendered(e, eventData) {
         // Set zoom overlay text
-        $(bottomRight[0]).text("Zoom:" + eventData.viewport.scale.toFixed(2));
+        $(bottomRight[0]).text("Zoom:" +  eventData.viewport.scale.toFixed(2));
+        $(zoomDate).text("Zoom:" +  eventData.viewport.scale.toFixed(2));
         // Set WW/WL overlay text
         $(bottomRight[1]).text("WW/WL:" + Math.round(eventData.viewport.voi.windowWidth) + "/" + Math.round(eventData.viewport.voi.windowCenter));
+        $(wwDate.text("WW/WL:" + Math.round(eventData.viewport.voi.windowWidth) + "/" + Math.round(eventData.viewport.voi.windowCenter)));
         // Set render time overlay text
         $(bottomLeft[1]).text("Render Time:" + eventData.renderTimeInMs + " ms");
+        $(renderDate).text("Render Time:" + eventData.renderTimeInMs + " ms");
     }
     // Add a CornerstoneImageRendered event listener on the 'element' (viewer) (?)
     $(element).on("CornerstoneImageRendered", onImageRendered);

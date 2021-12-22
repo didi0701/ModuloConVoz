@@ -7,7 +7,7 @@ $('.tbl-accordion-nested').each(function(){
 	//  tbody.hide();
 	 thead.click(function(){
 	 	tbody. slideToggle();
-	 	document.getElementById("diagnostico").rows = "25";
+	 	document.getElementById("diagnostico").rows = "10";
 	 	document.getElementById("listaAcor").style.width = "100%";
 	 	document.getElementById("contenido").style.width = "100%";
 	 })
