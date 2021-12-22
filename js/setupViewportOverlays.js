@@ -61,13 +61,13 @@ function setupViewportOverlays(element, data) {
     // On image rendered
     function onImageRendered(e, eventData) {
         // Set zoom overlay text
-        $(bottomRight[0]).text("Zoom:" +  eventData.viewport.scale.toFixed(2));
+        $(bottomRight[0]).text("Zoom: " +  eventData.viewport.scale.toFixed(2));
         $(zoomDate).text("Zoom:" +  eventData.viewport.scale.toFixed(2));
         // Set WW/WL overlay text
-        $(bottomRight[1]).text("WW/WL:" + Math.round(eventData.viewport.voi.windowWidth) + "/" + Math.round(eventData.viewport.voi.windowCenter));
+        $(bottomRight[1]).text("WW/WL: " + Math.round(eventData.viewport.voi.windowWidth) + "/" + Math.round(eventData.viewport.voi.windowCenter));
         $(wwDate.text("WW/WL:" + Math.round(eventData.viewport.voi.windowWidth) + "/" + Math.round(eventData.viewport.voi.windowCenter)));
         // Set render time overlay text
-        $(bottomLeft[1]).text("Render Time:" + eventData.renderTimeInMs + " ms");
+        $(bottomLeft[1]).text("Render Time: " + eventData.renderTimeInMs + " ms");
         $(renderDate).text("Render Time:" + eventData.renderTimeInMs + " ms");
     }
     // Add a CornerstoneImageRendered event listener on the 'element' (viewer) (?)
