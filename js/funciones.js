@@ -4,7 +4,7 @@ $('.tbl-accordion-nested').each(function(){
 	var thead = $(this).find('thead');
 	var tbody = $(this).find('tbody');
 //OCULTAR
-	//  tbody.hide();
+	 tbody.hide();
 	 thead.click(function(){
 	 	tbody. slideToggle();
 	 	document.getElementById("diagnostico").rows = "10";

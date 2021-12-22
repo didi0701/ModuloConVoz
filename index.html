@@ -105,7 +105,7 @@
                                                                       <div>T-L SPINE</div>
                                                                           <div>16/1/2021</div>
                                                                   </div>
-                                                                  <div id="listaImagenes" onclick="expandirResultados()" class="overlay">
+                                                                  <div id="listaImagenes"  onclick="expandirResultados()" class="overlay">
                                                                       <i class="fa fa-list"></i>
                                                                       <!-- <div class="fps"></div> -->
                                                                       <!-- <div>
@@ -300,14 +300,15 @@
                                                 <tr>
                                                       <td>
                                                           <table id="tablaAcor" cellpadding="0" cellspacing="0" class="tbl-accordion-nested">
-                                                              <thead>
-                                                                  <tr>
+                                                              <thead class="mybutt1">
+                                                                  <tr >
                                                                       <td id="listaAcor" colspan="2" class="tbl-accordion-section"> <i
                                                                               class="fad fa-angle-double-down"></i> <strong>INFORMACIÓN
                                                                               GENERAL</strong> </td>
                                                                   </tr>
                                                                   <thead>
-                                                                  <tbody class="fold" id="contenido"
+                                                                   </div> 
+                                                                  <tbody id="contenido" class="informe1"
                                                                       style=" text-align: center;   color: black; background-color: white ">
                                                                   </tbody>
                                                           </table>
@@ -316,7 +317,7 @@
                                                   <tr>
                                                       <td>
                                                           <table id="tablaAcor" cellpadding="0" cellspacing="0" class="tbl-accordion-nested">
-                                                              <thead>
+                                                              <thead class="mybutt2">
                                                                   <tr >
                                                                       <td colspan="2" id="listaAcor" class="tbl-accordion-section"> <i
                                                                               class="fad fa-angle-double-down"></i> <strong>
@@ -324,8 +325,7 @@
                                                                           </strong> </td>
                                                                   </tr>
                                                               </thead>
-                                                                
-                                                                 
+                                                                <tbody class="informe2">                                                      
                                                                   <tr>
                                                                     <th colspan="2" style="background-color: #f2f2f2;">
                                                                       <div id="info" style="background-color: white;"> 
@@ -385,7 +385,7 @@
                                                                           </div>
                                                                         </div>
                                                                   </th></tr>
-                                                                  <tbody>
+                                                               
                                                                     <tr>
                                                                         <td colspan="2" style=" text-align: center;" scope="col">
                                                                             <textarea id="diagnostico" name="diagnostico"
@@ -521,12 +521,63 @@
                               <script src="js/funciones.js"></script>
                               <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
                               <script>
+                                    animateDisplay = function(target, animationClass, displayType, timeout) {
+                                      // timeout should be longer than css transition
+                                      var doneTimedDisplay = false,
+                                        displaying = false;
 
+                                      target.addEventListener('transitionend', function() {
+                                        if (!target.classList.contains('show')) {
+                                          target.style.display = 'none';
+                                        }
+                                        doneTimedDisplay = true;
+                                      });
+                                      if (!target.style.display || target.style.display === 'none') {
+                                        displaying = true;
+                                        target.style.display = displayType;
+                                      } else {
+                                        displaying = false;
+                                      }
+
+                                      setTimeout(function() {
+                                        target.classList.toggle(animationClass);
+                                        doneTimedDisplay = false;
+                                      }, 10);
+
+                                      if (!displaying) {
+                                        setTimeout(function() {
+                                          // failsafe for transitioned not firing
+                                          if (!doneTimedDisplay) {
+                                            target.style.display = 'none';
+                                          }
+                                          doneTimedDisplay = true;
+                                        }, timeout);
+                                      }
+                                    };
+
+                                  document.querySelector('.mybutt1')
+                                    .addEventListener('click', function() {
+                                    animateDisplay(document.querySelector('.informe1'), 'show', 'block', 600)
+                                  });
+
+                                  document.querySelector('.mybutt2')
+                                .addEventListener('click', function() {
+                                animateDisplay(document.querySelector('.informe2'), 'show', 'block', 600)
+                              });
 
     
 
 
                               </script>
+                              <script>
+                             
+                            
+
+
+
+
+                              </script>
+
                               <script type="text/javascript">
                                   $(document).ready(function () {
                                       if (window.innerWidth < 768) {

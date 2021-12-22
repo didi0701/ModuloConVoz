@@ -1,3 +1,24 @@
+/* animacion */
+/* .box1 {
+  display: inline-block;
+}
+.informe1 {
+  height: 50%;
+  width: 100%;
+  background: yellow;
+  opacity: 0;
+  display: none;
+  transition: all .3s ease-in-out;
+}
+
+.informe1.show {
+  opacity: 20;
+ 
+} */
+.informe1 tr th {
+ /*  */
+  width: 100%;
+}
 /* responsivo */
 /* body {
   overflow-x: hidden;
