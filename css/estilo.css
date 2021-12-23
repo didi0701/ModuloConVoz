@@ -19,6 +19,10 @@
  /*  */
   width: 100%;
 }
+.informe2 tr th {
+  /*  */
+   width: 100vw;
+ }
 /* responsivo */
 /* body {
   overflow-x: hidden;
@@ -332,7 +336,7 @@ nav {
   margin: 2%;
   padding: 1%;
   background:  #6b87ab ;
-  box-shadow: 0px 1px 0px 0px  #054286 ;
+  box-shadow: 0px 1px 0px 0px  white ;
 }
 .boton:hover {
   background: #6b87ab ;

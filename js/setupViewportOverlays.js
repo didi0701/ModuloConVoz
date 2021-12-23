@@ -21,6 +21,7 @@ function setupViewportOverlays(element, data) {
     var zoomDate = $('#zoomDate');
     var wwDate = $('#wwDate');
     var renderDate = $('#renderDate');
+    var imageDate = $('#imageDate');
 
 
     var bottomMiddle = $(childDivs[4]).find('div');
@@ -55,6 +56,8 @@ function setupViewportOverlays(element, data) {
         var stack = toolData.data[0];
         // Update Image number overlay
         $(bottomLeft[2]).text("Image # " + (stack.currentImageIdIndex + 1) + "/" + stack.imageIds.length);
+        $(imageDate).text("Imagen # " + (stack.currentImageIdIndex + 1) + "/" + stack.imageIds.length);
+       
     }
     // Add a CornerstoneNewImage event listener on the 'element' (viewer) (?)
     $(element).on("CornerstoneNewImage", onNewImage);

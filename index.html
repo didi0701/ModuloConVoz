@@ -329,14 +329,13 @@
                     </p>
                     <p id="info_allow">Haga clic en el botón "Permitir" de arriba para habilitar su micrófono.</p>
                     <p id="info_denied"> Se denegó el permiso para usar el micrófono.</p>
-                    <p id="info_blocked"> El permiso para usar el micrófono está bloqueado. Cambiar,
-                      ir a chrome: // settings / contentExceptions # media-stream</p>
+                    <p id="info_blocked">Micrófono está bloqueado. Revise la Config.</p>
                     <p id="info_upgrade">Web Speech API is not supported by this browser.
                       Upgrade to <a href="//www.google.com/chrome">Chrome</a>
                       version 25 or later.</p>
                   </div>
                   <div class="right">
-                    <button id="start_button" onclick="startButton(event)">
+                    <button id="start_button"  class="btn btn-secondary"  style="background-color: transparent;" onclick="startButton(event)">
                       <img id="start_img" src="mic.gif" alt="Start"></button>
                   </div>
                   <div id="results">
@@ -345,10 +344,10 @@
                     <p>
                   </div>
                   <div class="center">
-                    <div class="sidebyside" style="text-align:right">
-                      <button id="copy_button" class="button" onclick="copyButton()">
-                        Copiar</button>
-                      <div id="copy_info" class="info">
+                    <div class="sidebyside" style="text-align:left">
+                      <button id="copy_button"  class="boton" onclick="copyButton()">
+                        Redactar</button>
+                      <div hidden id="copy_info" class="info">
                         Control-C .<br>
                       </div>
                     </div>
@@ -362,7 +361,7 @@
 
                     </div>
                     <div>
-                      <textarea id="resumenFinal" class="form-control"></textarea>
+                      <textarea id="resumenFinal" class="form-control" rows="12"></textarea>
                     </div>
 
                     <p>
@@ -378,14 +377,14 @@
 
               <tr>
                 <td colspan="2" style=" text-align: center;" scope="col">
-                  <textarea id="diagnostico" name="diagnostico" style="font-size:12px; text-align: justify;  "
+                  <textarea hidden id="diagnostico" name="diagnostico" style="font-size:12px; text-align: justify;  "
                     class="form-control" id="exampleFormControlTextarea1" rows=10% cols=100%>Los rayos X son una forma de radiación electromagnética de onda corta que atraviesa la materia2. Básicamente generan fotografías, pero en vez de utilizar la luz usan la radiación para generar el contraste. La cantidad de radiación producida por los rayos X es muy pequeña (0,2 milisieverts, o mSv, una unidad que pertenece a la misma familia que el litro y el kilogramo) y solamente es la causa del 0,00001% de los tumores malignos mortales en Estados Unidos3,4.
                                                                             </textarea>
                   <br>
 
                   <!-- <a href="#" class="boton azul"  style="padding: 5px; background-color:  #094487 "  onclick="ocultaInforme()"> 
                                                                             <i class="fas fa-long-arrow-alt-left"></i></a> -->
-                  <a href="#" class="boton" onclick="activar()"> Editar</a>
+                  <!-- <a href="#" class="boton" onclick="activar()"> Editar</a> -->
                   <a href="#" class="boton" onclick="desactivar()">Guardar </a>
                   <a href="#" class="boton" onclick="desactivar()">Copiar datos </a>
 
@@ -421,9 +420,11 @@
                 </th>
 
               </tr>
-              <tr hidden>
-
-                <th colspan="2" style="background-color: #f2f2f2;">
+              <tr>
+                <th style="background-color: #f2f2f2;">
+                  <label id="imageDate"></label>
+                </th>
+                <th style="background-color: #f2f2f2; text-align: right;">
                   <label id="renderDate"></label>
                 </th>
               </tr>
