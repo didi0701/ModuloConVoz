@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 $('.tbl-accordion-nested').each(function(){
 	
 	var thead = $(this).find('thead');

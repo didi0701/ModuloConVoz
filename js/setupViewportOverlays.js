@@ -1,13 +1,13 @@
-function ConvertDate(dateStr){
-var match;
-var date;
-var temp="";
-if(dateStr!=""){
-  match = dateStr.match(/(\d{4})(\d{2})(\d{2})/);
-  date = new Date(match[1], match[2]-1, match[3]);
-  temp=date.toLocaleDateString();
-  }
-return temp;
+function ConvertDate(dateStr) {
+    var match;
+    var date;
+    var temp = "";
+    if (dateStr != "") {
+        match = dateStr.match(/(\d{4})(\d{2})(\d{2})/);
+        date = new Date(match[1], match[2] - 1, match[3]);
+        temp = date.toLocaleDateString();
+    }
+    return temp;
 }
 function setupViewportOverlays(element, data) {
     var parent = $(element).parent();
@@ -18,11 +18,11 @@ function setupViewportOverlays(element, data) {
     var topRight = $(childDivs[1]).find('div');
     var bottomLeft = $(childDivs[2]).find('div');
     var bottomRight = $(childDivs[3]).find('div');
-    var zoomDate=$('#zoomDate');
-    var wwDate=$('#wwDate');
-    var renderDate=$('#renderDate');
- 
-     
+    var zoomDate = $('#zoomDate');
+    var wwDate = $('#wwDate');
+    var renderDate = $('#renderDate');
+
+
     var bottomMiddle = $(childDivs[4]).find('div');
     // Set the overlay text
     $(topLeft[0]).text(data.patientName);
@@ -49,7 +49,7 @@ function setupViewportOverlays(element, data) {
             }
         }
         var toolData = cornerstoneTools.getToolState(element, 'stack');
-        if(toolData === undefined || toolData.data === undefined || toolData.data.length === 0) {
+        if (toolData === undefined || toolData.data === undefined || toolData.data.length === 0) {
             return;
         }
         var stack = toolData.data[0];
@@ -61,8 +61,8 @@ function setupViewportOverlays(element, data) {
     // On image rendered
     function onImageRendered(e, eventData) {
         // Set zoom overlay text
-        $(bottomRight[0]).text("Zoom: " +  eventData.viewport.scale.toFixed(2));
-        $(zoomDate).text("Zoom:" +  eventData.viewport.scale.toFixed(2));
+        $(bottomRight[0]).text("Zoom: " + eventData.viewport.scale.toFixed(2));
+        $(zoomDate).text("Zoom:" + eventData.viewport.scale.toFixed(2));
         // Set WW/WL overlay text
         $(bottomRight[1]).text("WW/WL: " + Math.round(eventData.viewport.voi.windowWidth) + "/" + Math.round(eventData.viewport.voi.windowCenter));
         $(wwDate.text("WW/WL:" + Math.round(eventData.viewport.voi.windowWidth) + "/" + Math.round(eventData.viewport.voi.windowCenter)));
