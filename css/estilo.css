@@ -176,6 +176,7 @@ wrap {
 #tablaAcor {
   width: 100%;
   font-size: small;
+  overflow-y: scroll;
 }
 #tablaAcor th {
   white-space: nowrap;
