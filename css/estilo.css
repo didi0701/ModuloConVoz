@@ -1,5 +1,16 @@
+/* HABILITAR NOMBRES BOTONES Invisible texto 
+                                      figcaption {
+                                      display:none; 
+                                      transition: all .5s;
+                                      }
+                                      /* Visible texto 
+                                      button:hover > figcaption {
+                                      display:block;
+                                      transition: all .5s;
+                                      }*/
+
 /* animacion */
-/* .box1 {
+.box1 {
   display: inline-block;
 }
 .informe1 {
@@ -14,21 +25,37 @@
 .informe1.show {
   opacity: 20;
  
-} */
+}
 .informe1 tr th {
- /*  */
+  /*  */
   width: 100%;
+}
+.box2 {
+  display: inline-block;
+}
+.informe2 {
+  height: 50%;
+  width: 100%;
+  background: #F2F2F2;
+  opacity: 0;
+  display: none;
+  transition: all .3s ease-in-out;
+}
+
+.informe2.show {
+  opacity: 20;
+ 
 }
 .informe2 tr th {
   /*  */
-   width: 100vw;
- }
+  width: 100vw;
+}
 /* responsivo */
 /* body {
   overflow-x: hidden;
 } */
 .buttonr {
-  border: 1.2vh  rgb(200, 200, 200);
+  border: 1.2vh rgb(200, 200, 200);
   /* margin: 1.5vh 1vw; */
   width: 5vw;
   font-size: 2vw;
@@ -69,7 +96,6 @@
     width: 15vw;
     font-size: 3vw;
   }
-
 }
 
 @media only screen and (max-width: 35px) {
@@ -86,9 +112,8 @@
   }
 }
 
-
 /* HOVER IMAGENES */
-.lista:hover{
+.lista:hover {
   color: red;
 }
 
@@ -106,12 +131,12 @@ wrap {
   background: black;
   border-radius: 10px;
   padding: 1%;
-  }
+}
 
 #listaImagenes {
   bottom: 0%;
   text-align: center;
-  background-color: #d2dce5  ;
+  background-color: #d2dce5;
   color: #054286;
   font-size: 14px;
   width: 5%;
@@ -278,7 +303,7 @@ nav {
 }
 .Menu {
   position: relative;
-  background-color: #f59430 ;
+  background-color: #f59430;
   border: none;
   font-size: 28px;
   color: #d2dce5;
@@ -319,7 +344,7 @@ nav {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   /* display: inline-block; */
   color: #f2f2f2;
-  background:  #054286    ;
+  background: #054286;
   padding: 1px 10px;
   white-space: nowrap;
   -webkit-border-radius: 5px;
@@ -335,15 +360,15 @@ nav {
 .azul {
   margin: 2%;
   padding: 1%;
-  background:  #6b87ab ;
-  box-shadow: 0px 1px 0px 0px  white ;
+  background: #6b87ab;
+  box-shadow: 0px 1px 0px 0px white;
 }
 .boton:hover {
-  background: #6b87ab ;
+  background: #6b87ab;
   color: #054186;
 }
 .azul:active {
-  box-shadow: 0px 2px 0px 0px  #6b87ab ;
+  box-shadow: 0px 2px 0px 0px #6b87ab;
 }
 /*MENU LATERAL*/
 .btn-nav {
