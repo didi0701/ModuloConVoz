@@ -52,9 +52,6 @@
       traer();
       var y = document.getElementById("Herramientas");
       y.style.display = "none";
-
-
-
       //var  Z= document.getElementById("informe");
       //Z.style.display = "none";
     }
@@ -268,7 +265,7 @@
           </div>
         </div>
       </div>
-      <div id="informe" class="col-md-4" style=" position: absolute;top:10; right:0%;     overflow-y:scroll;">
+      <div id="informe" class="col-md-4" style=" position: absolute;top:2; right:0%;   ">
         <table id="tablaAcor" class="table  table-sm" cellpadding="0" cellspacing="0" class="tbl-accordion"
           style="background-color: transparent">
           <thead>
@@ -361,7 +358,7 @@
 
                     </div>
                     <div>
-                      <textarea id="resumenFinal" class="form-control" rows="12"></textarea>
+                      <textarea id="resumenFinal" class="form-control" rows="10"></textarea>
                     </div>
 
                     <p>
@@ -567,63 +564,7 @@
 
 
 
-
-  </script>
-  <script>
-
-
-
-
-
-
-  </script>
-
-  <!-- <script type="text/javascript">
-                                  $(document).ready(function () {
-                                      if (window.innerWidth < 768) {
-                                          $('.btn').addClass('btn');
-                                      }
-                                      // Medida por defecto (Sin ningún nombre de clase)
-                                      else if (window.innerWidth < 900) {
-                                          $('.btn').removeClass('btn');
-                                      }
-                                      // Si el ancho del navegador es menor a 1200 px le asigno la clase 'btn-lg' 
-                                      else if (window.innerWidth < 1200) {
-                                          $('.btn').addClass('btn-lg');
-                                      }
-                                  });
-                                  var messages = ['🔊 Hey', '🔊 Hi, there!', '🔊 Hi!', '🔊 Hello'];
-
-                                  if(annyang){
-                                      console.log("We have annyang!");
-
-                                      var commands = {
-                                          'Hello' : hello,
-                                          'What is your name' : myname
-                                      }
-
-                                      function hello(){
-                                          var randomIndex = Math.round(Math.random() * messages.length);
-                                          console.log(`%c ${messages[randomIndex]}`,'color: green; font-weight:bold;');
-                                      }
-
-                                      function myname(){
-                                          console.log("My name is Billy!");
-                                      }
-
-                                      // Add Commands
-                                      annyang.addCommands(commands);
-
-                                      // Start listening
-                                      annyang.start();
-
-                                  }
-
-
-                          
-
-                              </script> -->
-  <script>
+// VOZ A TEXTO
     var langs =
       [['Afrikaans', ['af-ZA']],
       ['Bahasa Indonesia', ['id-ID']],
