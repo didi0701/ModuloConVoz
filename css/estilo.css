@@ -10,9 +10,9 @@
                                       }*/
 
 /* animacion */
-.box1 {
+/* .box1 {
   display: inline-block;
-}
+} */
 .informe1 {
   height: 50%;
   width: 100%;
@@ -27,12 +27,12 @@
  
 }
 .informe1 tr th {
-  /*  */
+
   width: 100%;
 }
-.box2 {
+/* .box2 {
   display: inline-block;
-}
+} */
 .informe2 {
   height: 50%;
   width: 100%;
@@ -47,7 +47,7 @@
  
 }
 .informe2 tr th {
-  /*  */
+
   width: 100vw;
 }
 /* responsivo */

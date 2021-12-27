@@ -328,7 +328,7 @@ $('.tbl-accordion-nested').each(function(){
 	var thead = $(this).find('thead');
 	var tbody = $(this).find('tbody');
 //OCULTAR
-	 tbody.hide();
+	// tbody.hide();
 	 thead.click(function(){
 	 	tbody. slideToggle();
 	 	document.getElementById("diagnostico").rows = "10";
@@ -425,11 +425,11 @@ var viewportTemplate = $(document.getElementsByClassName("viewportWrapper"));
 loadStudy(studyViewerTemplate, viewportTemplate, StudyInstanceUID);
 var contenido = document.querySelector('#contenido')
 function traer() {
-	fetch('temp/Paciente.json')
+	fetch('css/temp/Paciente.json')
 	.then(res => res.json())
 	.then(datos => {
 		tabla(datos)
-		// console.log(datos)
+	 console.log(datos)
 	})
 }
 function tabla(datos) {

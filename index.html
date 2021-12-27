@@ -1,21 +1,15 @@
 <html lang="en">
-
 <head>
-  <meta http-equiv="Access-Control-Allow-Origin" content="http://192.168.10.17:6628/">
-  <!-- Support for mobile touch devices -->
+  <!-- <meta http-equiv="Access-Control-Allow-Origin" content="http://192.168.10.17:6628/"> -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <!-- Font awesome CSS for tool icons -->
   <link href="fonts/font-awesome.min.css" rel="stylesheet">
-  <!-- Bootstrap CSS -->
   <link href="fonts/bootstrap.min.css" rel="stylesheet">
-  <!-- UI CSS -->
   <link href="jquery-ui.min.css" rel="stylesheet">
-  <!-- Cornerstone Base CSS -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <link href="cornerstone.css" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -35,12 +29,13 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="css/estilo.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
     var StudyInstanceUID = 'Paciente';
-    var WEBIPPort = '192.168.10.17:6628';
-    var SecureHTTPS = false;
+    var WEBIPPort = '192.168.10.17:6628/css';
+    var SecureHTTPS = false
     var UseJPEG = false;
     function activar() {
       document.getElementById("diagnostico").disabled = false;
@@ -52,49 +47,37 @@
       traer();
       var y = document.getElementById("Herramientas");
       y.style.display = "none";
-      //var  Z= document.getElementById("informe");
-      //Z.style.display = "none";
     }
     window.onload = miFuncion;
     $('#myModal').on('shown.bs.modal', function () {
       $('#myInput').trigger('focus')
     })
   </script>
-  <!-- BOOSTRAP -->
- 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="js/annyang.min.js"></script>
 </head>
 
 <body style="background-color: black;   ">
   <div id="wrap">
     <div class="main">
-      <!-- Tab content -->
       <div class="container-responsive">
         <div id="estudio" class="col-md-12">
           <div id="studyViewerTemplate" class="tab-pane active">
             <div class="studyContainer">
               <div class="studyRow row">
-                <!-- Thumbnails -->
                 <div class="thumbnailSelector" id="ResultadosLista"
                   style="position: absolute; top: 6%; height: 90%; margin: 2px;">
                   <div class="thumbnails list-group">
-
                   </div>
                 </div>
-                <!-- Viewer -->
                 <div class="viewer">
                   <div class="imageViewer" style="height:50%;">
                     <div class="viewportWrapper"
-                      style="width:100%;;position:absolute;color: white;float:left;background-color:black;"
+                      style="width:50%;;position:absolute;color: white;float:left;background-color:black;"
                       oncontextmenu="return false" unselectable="on" onselectstart="return false;"
                       onmousedown="return false;">
                       <div class="viewport ui-droppable"
                         style="touch-action: none;  user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
                         <canvas id="cambio" class="canvas" name="canvas" width=100 height=90
-                          style="width: 100%; height: 0%;"></canvas>
+                          style="width: 50%; height: 0%;"></canvas>
                       </div>
                       <br>
                       <div class="overlay" style="top:0px; left:0px">
@@ -104,25 +87,16 @@
                         <div>16/1/2021</div>
                       </div>
                       <div id="listaImagenes" onclick="expandirResultados()" class="overlay">
-                        <!-- <i class="fa fa-list"></i> -->
                         <i class="fas fa-images"></i>
-                        <!-- <div class="fps"></div> -->
-                        <!-- <div>
-                                                                          <i class="fa fa-bars"></i>
-                                                                      </div> -->
-                        <!-- <div style="font-size: 12px; color:  #f2f2f2 " class="renderTime">Render Time:0 ms</div>
-                                                                                  <div style="font-size: 12px; color:  #f2f2f2 " class="currentImageAndTotalImages">Image # 1/4</div> -->
+                        <div style="font-size: 12px; color:  #f2f2f2 " class="currentImageAndTotalImages">Image # 1/4
+                        </div> -->
                       </div>
                       <div id="zoomww" class="overlay" hidden>
-                        <!-- <div>Zoom: &nbsp; 0.29</div>
-                                                                      <div>WW/WL:8892/6046</div> -->
                         <h4>Herramientas</h4>
-
                       </div>
                     </div>
                   </div>
                   <div class="text-center">
-                    <!-- Add btn-group here -->
                     <div class="btn-group-vertical" id="Herramientas">
                       <!-- WW/WL -->
                       <button class="btn btn-secondary" id="btnMenu" type="button" class="btn btn-lg btn-secondary"
@@ -135,7 +109,7 @@
                       <button class="btn btn-secondary" id="btnMenu" type="button" class="btn btn-lg btn-secondary"
                         data-container="body" data-toggle="tooltip" data-placement="bottom" title=""
                         data-original-title="">
-                        <i title="jjjjjj" class="fad fa-adjust"></i>
+                        <i title="" class="fad fa-adjust"></i>
                         <figcaption id="btnTitle">Invertir</figcaption>
                       </button>
                       <!-- Zoom -->
@@ -214,19 +188,6 @@
                         <span class="fa fa-undo"></span>
                         <figcaption id="btnTitle">Restaurar</figcaption>
                       </button>
-                      <!-- <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-container="body" data-toggle="dropdown" aria-expanded="true" data-placement="top" title="" data-original-title="Layout">
-                                                                                  <span class="fa fa-th-large"></span></button>
-                                                                                  <ul class="pull-right dropdown-menu choose-layout" role="menu" >
-                                                                                          <li><a href="#">1x1</a></li>
-                                                                                          <li><a href="#">1x2</a></li>
-                                                                                          <li><a href="#">1x3</a></li>
-                                                                                          <li><a href="#">2x2</a></li>
-                                                                                  </ul>	 -->
-                      <!-- <button class="direccion"  id="botonIzquierda"  type="button" class="btn btn-sm btn-warning" data-container="body" data-toggle="tooltip" data-placement="bottom" title="" >
-                                                                                  <i class="fa fa-reply"> ANTERIOR </i>
-                                                                          </button> -->
-                      <!-- <button class="direccion" id="botonDerecha"  type="button" class="btn btn-sm btn-warning" data-container="body" data-toggle="tooltip" data-placement="bottom" title="" >
-                                                                                  SIGUIENTE <i class="fa fa-share"> </i></button> -->
                     </div>
                     <div class="wrap" style="position:  relative; top:-10; left: 5%;  right: 10%;">
                       <button class="btn btn-secondary" id="botonIzquierda"
@@ -239,7 +200,7 @@
                       <button class="btn btn-secondary" onclick="expandirInforme()">
                         <i class="fa fa-pencil"></i>
                       </button>
-                      <button  hidden class="btn btn-secondary" type="button" data-toggle="modal" data-target="#myModal">
+                      <button hidden class="btn btn-secondary" type="button" data-toggle="modal" data-target="#myModal">
                         <i class="fa fa-undo"></i>
                       </button>
                       <button class="btn btn-secondary" id="botonDerecha"
@@ -256,7 +217,7 @@
                       <input hidden="" type="button" id="btn" value="Download" />
                     </div>
                   </div>
-                  <!-- Viewer -->
+
                 </div>
               </div>
               <div style="clear:both;"></div>
@@ -264,12 +225,12 @@
           </div>
         </div>
       </div>
-      <div id="informe" class="col-md-4" style=" position: absolute;top:2; right:0%; height: 100%;    overflow-y: scroll;  " >
+      <div id="informe" class="col-md-4"
+        style=" position: absolute;top:2; right:0%; height: 100%;    overflow-y: scroll;  ">
         <table id="tablaAcor" class="table  table-sm" cellpadding="0" cellspacing="0" class="tbl-accordion"
           style="background-color: transparent">
           <thead>
             <tr>
-
               <td class="tbl-accordion-section"
                 style=" text-align: right;    background-color:  #345c94   ; color: #f2f2f2 ">
                 <i onclick="ocultaInforme()" class="fa fa-times" aria-hidden="true"></i>
@@ -277,9 +238,6 @@
             </tr>
           </thead>
           <tbody>
-
-
-
             <tr>
               <td>
                 <table id="tablaAcor" cellpadding="0" cellspacing="0" class="tbl-accordion-nested">
@@ -331,17 +289,18 @@
                       version 25 or later.</p>
                   </div>
                   <div class="right">
-                    <button id="start_button"  class="btn btn-secondary"  style="background-color: transparent;" onclick="startButton(event)">
+                    <button id="start_button" class="btn btn-secondary" style="background-color: transparent;"
+                      onclick="startButton(event)">
                       <img id="start_img" src="mic.gif" alt="Start"></button>
                   </div>
-                  <div id="results"  >
+                  <div id="results">
                     <span id="final_span" class="final"></span>
                     <span id="interim_span" class="interim"></span>
                     <p>
                   </div>
                   <div class="center">
                     <div class="sidebyside" style="text-align:left">
-                      <button id="copy_button"  class="boton" onclick="copyButton()">
+                      <button id="copy_button" class="boton" onclick="copyButton()">
                         Redactar</button>
                       <div hidden id="copy_info" class="info">
                         Control-C .<br>
@@ -354,14 +313,11 @@
                         Text sent to default email application.<br>
                         (See chrome://settings/handlers to change.)
                       </div>
-
                     </div>
                     <div>
                       <textarea id="resumenFinal" class="form-control" rows="10"></textarea>
                     </div>
-
                     <p>
-
                     <div id="div_language" hidden="">
                       <select disabled="" id="select_language" onchange="updateCountry()"></select>
                       &nbsp;&nbsp;
@@ -370,42 +326,31 @@
                   </div>
                 </th>
               </tr>
-
               <tr>
                 <td colspan="2" style=" text-align: center;" scope="col">
                   <textarea hidden id="diagnostico" name="diagnostico" style="font-size:12px; text-align: justify;  "
                     class="form-control" id="exampleFormControlTextarea1" rows=10% cols=100%>Los rayos X son una forma de radiación electromagnética de onda corta que atraviesa la materia2. Básicamente generan fotografías, pero en vez de utilizar la luz usan la radiación para generar el contraste. La cantidad de radiación producida por los rayos X es muy pequeña (0,2 milisieverts, o mSv, una unidad que pertenece a la misma familia que el litro y el kilogramo) y solamente es la causa del 0,00001% de los tumores malignos mortales en Estados Unidos3,4.
-                                                                            </textarea>
+                                                                      </textarea>
                   <br>
-
-                  <!-- <a href="#" class="boton azul"  style="padding: 5px; background-color:  #094487 "  onclick="ocultaInforme()"> 
-                                                                            <i class="fas fa-long-arrow-alt-left"></i></a> -->
-                  <!-- <a href="#" class="boton" onclick="activar()"> Editar</a> -->
                   <a href="#" class="boton" onclick="desactivar()">Guardar </a>
                   <a href="#" class="boton" onclick="desactivar()">Copiar datos </a>
-
                 </td>
               </tr>
-
-
             </tbody>
           </table>
         </td>
       </tr>
-
       <tr>
         <td>
           <table id="tablaAcor" cellpadding="0" cellspacing="0" class="tbl-accordion-nested" ST>
             <thead class="mybutt1">
               <tr>
-
                 <th style=" text-align: left;  background-color: #f59430   ; color: #094487  " scope="row">
                   <label>Medico: LUIS RAMOS</label>
                 </th>
                 <th style=" text-align: right;  background-color: #f59430   ; color: #094487  " scope="row">
                   <label>Registro: #12345678</label>
                 </th>
-
               </tr>
               <tr>
                 <th style="background-color: #f2f2f2;">
@@ -414,7 +359,6 @@
                 <th style="background-color: #f2f2f2; text-align: right; ">
                   <label id="wwDate"></label>
                 </th>
-
               </tr>
               <tr>
                 <th style="background-color: #f2f2f2;">
@@ -427,11 +371,11 @@
           </table>
         </td>
       </tr>
-      
+
       </tbody>
       </table>
     </div>
-    <!-- Study viewer tab content template -->
+
   </div>
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -453,43 +397,22 @@
           <button type="button" class="btn btn-success"> <i class="fa fa-check" aria-hidden="true"></i>
             Salir</button>
           <button type="button" class="btn btn-daNGER"> <i class="fas fa-times"></i> Cancelar</button>
-          <!--   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> -->
+
         </div>
       </div>
     </div>
   </div>
   </div>
-
-  <!-- Include JQuery -->
-  <script>
-    var i;
-    var paciente = [
-      "ABAD CRUZ LUIS", "1720591237", "1/1/1992"
-    ];
-    for (i = 0; i < paciente.length; i++) {
-      // document.getElementById("datosPaciente").innerHTML += "<br>"+ paciente[i] + " ";
-    }
-  </script>
   <script src="js/jquery.min.js"></script>
-  <!-- Include JQuery UI for drag/drop -->
   <script src="js/jquery-ui.min.js"></script>
-  <!-- Include JQuery Hammerjs adapter for mobile touch-->
   <script src="js/hammer.js"></script>
-  <!-- Include Bootstrap js -->
   <script src="js/bootstrap.min.js"></script>
-  <!-- include the cornerstone library -->
   <script src="js/cornerstone.js"></script>
-  <!-- include the cornerstone library -->
   <script src="js/cornerstoneMath.js"></script>
-  <!-- include the cornerstone tools library -->
   <script src="js/cornerstoneTools.js"></script>
-  <!-- include the cornerstoneWADOImageLoader library -->
   <script src="js/cornerstoneWADOImageLoader.js"></script>
-  <!-- include the cornerstoneWebImageLoader library -->
   <script src="js/cornerstoneWebImageLoader.js"></script>
-  <!-- include the dicomParser library -->
   <script src="js/dicomParser.js"></script>
-  <!-- include cornerstoneDemo.js -->
   <script src="js/setupViewport.js"></script>
   <script src="js/displayThumbnail.js"></script>
   <script src="js/loadStudy.js"></script>
@@ -500,9 +423,6 @@
   <script src="js/setupViewportOverlays.js"></script>
   <script src="js/funciones.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-  
 </body>
-
-
 
 </html>
